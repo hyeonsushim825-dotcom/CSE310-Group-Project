@@ -4,9 +4,15 @@ import pandas as pd
 import numpy as np
 import csv
 
-ROOT = Path(r"C:\Users\Daniela\Downloads\CSV\CSV")
-OUT = Path("outputs")
-OUT.mkdir(exist_ok=True)
+# Project root: CSE310-Group-Project
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+# Original dataset location inside the project
+ROOT = PROJECT_ROOT / "CSV"
+
+# Inspection report output
+OUT = PROJECT_ROOT / "outputs"
+OUT.mkdir(parents=True, exist_ok=True)
 
 # Benign 컬럼을 기준으로 사용
 benign_path = ROOT / "Benign_Final" / "BenignTraffic.pcap.csv"
