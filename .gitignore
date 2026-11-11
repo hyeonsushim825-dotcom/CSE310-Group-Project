@@ -222,3 +222,14 @@ weights/
 # Experiment results
 results/*
 !results/.gitkeep
+
+# Local datasets and generated outputs
+/CSV/
+/benign/
+/data/cleaned_attack/
+/data/split_attack/
+/data/attack_pool/
+/outputs/
+
+# Local backup
+/.gitignore.local_backup
