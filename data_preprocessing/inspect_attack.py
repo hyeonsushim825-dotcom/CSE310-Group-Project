@@ -4,6 +4,21 @@ import pandas as pd
 import numpy as np
 import csv
 
+# ============================================================
+# Attack CSV Inspection - CICIoT2023
+#
+# This script checks attack CSV files for:
+# - Feature consistency with the benign dataset
+# - Invalid values (NaN, Inf, non-numeric values)
+#
+# Dataset setup:
+# - Original CICIoT2023 CSV files are not included in GitHub.
+# - By default, this script expects them in:
+#   CSE310-Group-Project/CSV/
+# - If your dataset is stored elsewhere, update ROOT below.
+# - Inspection reports are saved in outputs/.
+# ============================================================
+
 # Project root: CSE310-Group-Project
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
