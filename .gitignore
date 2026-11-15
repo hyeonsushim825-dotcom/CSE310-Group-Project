@@ -233,3 +233,9 @@ results/*
 
 # Local backup
 /.gitignore.local_backup
+
+# CICIoT2023 local arrays and training runs
+/datasets/
+/runs/
+*.npy
+*.npz
