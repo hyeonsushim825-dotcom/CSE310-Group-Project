@@ -1,0 +1,6 @@
+# Minimal requirements for the new training/check/test files, Python >= 3.10.
+# On the GPU server, first install a compatible CUDA-enabled PyTorch build.
+# This file does not select a CUDA version. Do not use --upgrade on a working
+# shared environment. Record exact installed versions for every experiment.
+numpy>=1.24,<3
+torch>=2.0,<3
