@@ -33,9 +33,9 @@ REPORT_PATH = (
 
 SEED = 42
 
-BENIGN_COUNT = 200_000
-ATTACK_COUNT_5 = 10_526
-ATTACK_COUNT_10 = 22_222
+TOTAL_DATASET_COUNT = 200_000
+ATTACK_COUNT_5 = 10_000
+ATTACK_COUNT_10 = 20_000
 
 
 def make_quotas(total, attack_types):
@@ -149,10 +149,10 @@ def main():
     )
 
     actual_ratio_5 = (
-        len(attack_5) / (BENIGN_COUNT + len(attack_5))
+        len(attack_5) / TOTAL_DATASET_COUNT
     )
     actual_ratio_10 = (
-        len(attack_10) / (BENIGN_COUNT + len(attack_10))
+        len(attack_10) / TOTAL_DATASET_COUNT
     )
 
     print("\n=== ATTACK SAMPLING COMPLETED ===")
@@ -162,6 +162,7 @@ def main():
     print(f"5% actual contamination ratio: {actual_ratio_5:.6%}")
     print(f"10% actual contamination ratio: {actual_ratio_10:.6%}")
     print("5% attack set is a subset of 10% attack set: YES")
+    print(f"Target total dataset size: {TOTAL_DATASET_COUNT:,}")
     print(f"5% output: {OUTPUT_5}")
     print(f"10% output: {OUTPUT_10}")
     print(f"Report: {REPORT_PATH}")

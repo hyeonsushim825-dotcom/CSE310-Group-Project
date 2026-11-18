@@ -27,12 +27,12 @@ DATASETS = {
     "5%": (
         ATTACK_DIR / "attack_5pct_raw.csv",
         ATTACK_DIR / "attack_5pct_scaled.npy",
-        10_526,
+        10_000,
     ),
     "10%": (
         ATTACK_DIR / "attack_10pct_raw.csv",
         ATTACK_DIR / "attack_10pct_scaled.npy",
-        22_222,
+        20_000,
     ),
 }
 
